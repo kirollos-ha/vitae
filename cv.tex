@@ -1,0 +1,139 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+% ------------------------------------------------------------
+% TEMPLATE PRESA DA
+% https://www.overleaf.com/latex/templates/autocv/scfvqfpxncwb
+% ------------------------------------------------------------
+\documentclass[a4paper,12pt]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Kirollos Habib} \\[7.5pt]
+\href{https://github.com/kirollos-ha}{\raisebox{-0.05\height}\faGithub\ kirollos-ha} \ $|$ \ 
+  \href{https://www.linkedin.com/in/kirollos-habib-79154b270/}
+  {\raisebox{-0.05\height}\faLinkedin\ Kirollos Habib} \ $|$ \ 
+\href{https://kirollos-ha.github.io}{\raisebox{-0.05\height}\faGlobe \ kirollos-ha.github.io} \ $|$ \ 
+\href{mailto:kirollosha@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ kirollosha@gmail.com} \ $|$ \ 
+\href{tel:+393296779549}{\raisebox{-0.05\height}\faMobile \ +39 329-677-9549} \\
+\end{tabularx}
+
+\section{Istruzione}
+\begin{itemize}
+  \item \textbf{Università degli Studi di Firenze} \hfill \textsc{Firenze} \\ \textit{Laurea Triennale in Ingengeria Informatica} \hfill \textit{2020 -- Presente}
+  \item \textbf{Liceo Scientifico Guido Castelnuovo} \hfill \textsc{Firenze} \\ \textit{Diploma Liceo Scientifico} \hfill \textit{2016 -- 2020}
+\end{itemize}
+
+\section{Esperienze Lavorative}
+\begin{itemize}
+  \item \textbf{Firenze Race Team} \hfill \textsc{Firenze} \\ \textit{Programamtore Reparto Autonomous} \hfill \textit{2022 -- Presente}
+  \item \textbf{Scuola media Masaccio} \hfill \textsc{Firenze} \\ \textit{Tutoraggio Scuole Medie e Auto Compiti per Casa} \hfill \textit{2020}
+\end{itemize}
+
+\section{Lingue}
+\begin{itemize}
+\item \textbf{Italiano} Madrelingua
+\item \textbf{Inglese} Livello Madrelingua \\ \textit{Certificato British Institute of Florence livelli B1, C1, e C2}
+\end{itemize}
+
+\section{Competenze organizzative e Gestionali}
+\begin{itemize}
+\item Automonia organizzativa e di analisi
+\item Precisione, serietà, e puntualità
+\item Capacità di interagire con eventuali clienti
+\item Capacità di lavorare in team ed in autonomia
+\item Capacità di lavorare da remoto
+\end{itemize}
+
+\section{Conoscenze Informatiche}
+\begin{itemize}
+\item \textbf{linguaggi} C, C++, Java, Rust, Bash, Python, JavaScript, Racket, Scheme, Common Lisp, Prolog
+\item \textbf{Front end} HTML, CSS, SCSS, JavaScript
+\item \textbf{Sistemi} Windows, GNU/Linux (Debian, Ubuntu, Arch, Fedora, $\dots$)
+\item \textbf{Database} SQL, PostgreSQL
+\item \textbf{Paradigmi} Object oriented, Funzionale, e Procedurale
+\end{itemize}
+Test Driven Development, \textsc{JUnit}, \textsc{ROS}(Robot Operating System), \textsc{Qt}, \textsc{CMake}, \textsc{Cygwin}, principi \textsc{Agile} e \textsc{SOLID}, Extreme Programming, Design Pattern, Git, \LaTeX , familiarità con \textsc{JSON} e \textsc{XML}, Microsoft Office, LibreOffice.
+
+\vfill
+
+{\footnotesize Autorizzo il trattamento dei miei dati personali presenti nel curriculum vitae ai sensi del Decreto Legislativo 2018/101 e del GDPR (Regolamento UE 2016/679)}
+
+\end{document}
